@@ -1,12 +1,16 @@
 import './ExpenseItem.css';
 
 function ExpenseItem() {
-  return (
+    const expenseDate = new Date(2021, 5, 6);
+    const expenseTitle = 'Flowers';
+    const expenseAmount = 164.32;
+  
+    return (
     <div className="expense-item">
-      <div>June 6th 2021</div>
+      <div>{expenseDate.toISOString}</div>
       <div className="expense-item__description">
-        <h2>Flowers</h2>
-        <div className="expense-item__price">£120.40</div>
+        <h2>{expenseTitle}</h2>
+        <div className="expense-item__price">£{expenseAmount}</div>
       </div>
     </div>
   );
